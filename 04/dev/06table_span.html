@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>05table</title>
+  <title>06table_span</title>
   <style>
     table{
       margin: 30px auto;
@@ -27,42 +27,34 @@
 <body>
   <div class="wrap">
     <table>
-      <thead>
+      <!-- rowspan="합치는갯수" : 가로열 셀합치기 -->
+      <!-- colspan="합치는갯수" : 세로열 셀합치기 -->
         <tr>
           <th>용도</th>
-          <th>중량</th>
-          <th>개수</th>
-          <th>가격</th>
+          <th colspan="3">중량 / 개수 / 가격</th>
         </tr>
-      </thead>
-      <tbody>
         <tr>
-          <td>선물용</td>
+          <td rowspan="2">선물용</td>
           <td>3kg</td>
           <td>11과~16과</td>
           <td>35,000</td>
         </tr>
         <tr>
-          <td>선물용</td>
           <td>5kg</td>
           <td>18과~26과</td>
           <td>52,000</td>
         </tr>
         <tr>
-          <td>가정용</td>
+          <td rowspan="2">가정용</td>
           <td>3kg</td>
           <td>11과~16과</td>
           <td>30,000</td>
         </tr>
-      </tbody>
-      <tfoot>
         <tr>
-          <td>가정용</td>
           <td>5kg</td>
           <td>18과~26과</td>
           <td>47,000</td>
         </tr>
-      </tfoot>
     </table>
   </div>
 </body>

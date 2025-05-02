@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- div는 객체다. document object id는 객체 참조변수-->
+  <!-- ※ id는 # class는 .으로 찾는다. -->
+  <div class="wrap" style=" text-align: center;" id="idWrap">
+    <!-- ./../images/tangerines.jpg (이렇게 ./로 경로를 설정하는게 FM) -->
+     <!-- ./ 현재 경로를 가리킴.  -->
+    <!-- ../ 경로 한번 나가기 명령어. -->
+     <!--창을 줄일때 -> 이미지가 변함없이 고정화 되는건 px(픽셀) / 이미지가 줄면서 일정하게 나오는건 %-->
+    <figure>
+     <a href="./../../02/dev/index.html" target="_self"><img src="./../images/tangerines.jpg" alt="레드향" style="width: 700px;"></a>
+      <figcaption>창이 줄면 이미지가 변함없이 고정화 되는건 px(창이 해당픽셀 이하가되면 줄어든다.)</figcaption>
+    </figure>
+    <figure>
+      <img src="./../images/tangerines.jpg" alt="레드향" style="width: 50%;">
+      <figcaption>창이 줄면 이미지가 줄면서 일정하게 나오는건 %</figcaption>
+    </figure>
+  </div>
+</body>
+</html>

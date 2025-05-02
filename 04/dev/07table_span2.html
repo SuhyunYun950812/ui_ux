@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      margin: 30px auto;
+    }
+    th{
+      background-color: rgb(255, 207, 73);
+    }
+    table,th,td{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th,td{
+      /* 패딩 : 상 우 하 좌 간격 */
+      padding: 10px 20px 10px 20px;
+      text-align: center;
+      /* 상하와 좌우 간격이 서로 동일하다면 이렇게 넣으면 된다. */
+      /* 패딩 : 상하 좌우 간격 */
+      /* padding: 10px 20px; */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <table>
+      <h1 style="text-align: center;">상품구성</h1>
+      <caption>선물용과 가정용 상품구성</caption>
+      <colgroup>
+        <col style="background-color: rgb(72, 232, 110) ;">
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <!-- rowspan="합치는갯수" : 가로열 셀합치기 -->
+      <!-- colspan="합치는갯수" : 세로열 셀합치기 -->
+<thead>
+          <tr>
+            <th>용도</th>
+            <th>중량</th>
+            <th>개수</th>
+            <th>가격</th>
+          </tr>
+</thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">선물용</td>
+            <td>3kg</td>
+            <td>11과~16과</td>
+            <td>35,000</td>
+          </tr>
+          <tr>
+            <td>5kg</td>
+            <td>18과~26과</td>
+            <td>52,000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td rowspan="2">가정용</td>
+            <td>3kg</td>
+            <td>11과~16과</td>
+            <td>30,000</td>
+          </tr>
+          <tr>
+            <td>5kg</td>
+            <td>18과~26과</td>
+            <td>47,000</td>
+          </tr>
+        </tfoot>
+    </table>
+  </div>
+</body>
+</html>
