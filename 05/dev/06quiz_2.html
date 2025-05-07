@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="wrap" style=" width: 70%; margin: 0;">
+    <h1>프론트개발자 지원서</h1>
+        <p><span style=" color: rgb(255, 0, 0);">HTML</span>, <span style=" color: rgb(255, 0, 0);">CSS</span>, <span style=" color: rgb(255, 0, 0);">자바스크립트</span> 의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.</p>
+        <hr>
+        <form method="post" action="#">
+            <legend>개인정보</legend>
+            <fieldset>
+                <label for="name">이름</label><input type="text" name="name" id="name" placeholder="공백 없이 입력하세요"> <br>
+                <label for="tel">연락처</label><input type="tel" name="tel" id="tel"> <br>
+            </fieldset>
+            <legend>지원분야</legend>
+            <fieldset>
+                <input type="radio" name="support" id="sp1"><label for="sp1">웹 퍼블리싱</label> <br>
+                <input type="radio" name="support" id="sp2"><label for="sp2">웹 애플리케이션 개발</label> <br>
+                <input type="radio" name="support" id="sp3"><label for="sp3">개발 환경 개선</label> <br>
+            </fieldset>
+            <legend>지원동기</legend>
+            <fieldset>
+                <textarea name="memo" id="memo" cols="50" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+            </fieldset>
+            <input type="submit" value="접수하기"> <input type="reset" value="다시쓰기">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <form action="#" method="get">
+            <fieldset>
+                <legend>취미입력하기2</legend>
+                <label for="hobbyck1">당구</label><input type="checkbox" name="당구" id="hobbyck1">
+                <label for="hobbyck2">게임</label><input type="checkbox" name="게임" id="hobbyck2">
+                <label for="hobbyck3">영화</label><input type="checkbox" name="영화" id="hobbyck3">
+            </fieldset>
+            <fieldset>
+                <legend>막대바</legend>
+                <label for="range">현재진행사항</label>
+                <input type="range" name="range" id="range">
+            </fieldset>
+            <fieldset>
+                <legend>숫자입력하기</legend>
+                <label for="age">당신의 나이:</label>
+                <input type="number" name="age" id="age" min="0" max="100" value="1">
+            </fieldset>
+
+            <input type="image" src="./images/login.png" alt="로그인" value="전송">
+            <input type="reset" value="취소">
+            <input type="button" value="전송하기" onclick="window.alert('전송하는알림창')">
+            <input type="button" value="새창열기" onclick="window.open('./01form.html')">
+        </form>
+    </div>
+</body>
+</html>

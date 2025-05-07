@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 40%;
+        }
+        table,th,tr,td{
+            border: 1px solid rgb(170, 170, 170);
+            border-collapse: collapse;
+            padding: 10px 20px;
+            font-size: smaller;
+        }
+        th{
+            background-color: rgba(212, 212, 212, 0.712);
+        }
+        input[type="text"],input[type="password"],select{
+            width: 80%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        input[type="email"],select{
+            width: 39.4%;
+        }
+        select[name="year"],select[name="month"],select[name="day"]{
+            width: 25.5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1 style=" margin-left: 50px;">회원가입</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend style="color: rgb(255, 174, 0);">필수 항목</legend>
+                <input type="text" placeholder="아이디"> <br>
+                <p></p>
+                <input type="password" placeholder="비밀번호" style="margin-bottom: 1px;"> <br>
+                <input type="password" placeholder="비밀번호"> <br>
+                <p></p>
+                <input type="text" placeholder="이름">
+                <p></p>
+                <input type="email" placeholder="이메일" size="7"><label for="email">@<select name="email" id="email">
+                    <option value="naver">naver.com</option>
+                    <option value="google">google.com</option>
+                    <option value="daum">daum.net</option>
+                </select> <br>
+                <input type="checkbox" name="age14" id="age14"><label for="age14">만 14세 이상입니다.</label> <br>
+                <input type="checkbox" name="Terms" id="Terms"><label for="Terms">이용약관 동의</label><a href="#" style="border: 1px solid black; font-size: smaller; margin-left: 5px;">내용보기</a><br>
+                <input type="checkbox" name="Pi" id="Pi"><label for="Pi">개인정보 수집 및 이용 동의</label><a href="#" style="border: 1px solid black; font-size: smaller; margin-left: 5px;">내용보기</a><br>
+            </fieldset>
+        </form>
+        <table>
+            <tr>
+                <th>구분</th>
+                <th>목적</th>
+                <th>항목</th>
+                <th>보유 및 이용기간</th>
+            </tr>
+            <tr>
+                <td>필수</td>
+                <td>이용자 식별,서비스 이행을 위한 연락</td>
+                <td>이름,아이디,비밀번호,이메일</td>
+                <td>회원탈퇴 후 5일까지</td>
+            </tr>
+        </table>
+        <form action="#" method="post">
+            <fieldset>
+                <legend style="color: grey;">선택 항목</legend>
+                <label for="birth">생년월일</label>
+                <select name="year" id="year">
+                    <option value="year">년도</option>
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                </select>
+                <select name="month" id="month">
+                    <option value="month">월</option>
+                    <option>1월</option>
+                    <option>2월</option>
+                    <option>3월</option>
+                </select>
+                <select name="day" id="day">
+                    <option value="day">일</option>
+                    <option>1일</option>
+                    <option>2일</option>
+                    <option>3일</option>
+                </select> <br>
+                <label for="gender">성별</label> <input type="radio" name="male" id="male"><label for="male">남</label><input type="radio" name="female" id="female"><label for="male">녀</label>
+            </fieldset>
+            <table>
+                <tr>
+                    <td rowspan="3"><input type="checkbox" name="allagree" id="allagree">전체동의</td>
+                    <td><input type="checkbox" name="check1" id="check1"><label for="check1">생년월일과 성별 수집 및 이용 동의</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="check2" id="check2"><label for="check2">이메일 마케팅 수신 동의</label></td>
+                </tr>
+                                <tr>
+                    <td><input type="checkbox" name="check3" id="check3"><label for="check3">개인정보 유휴기간 3년 지정(미동의 시 1년)</label></td>
+                </tr>
+            </table>
+            <table style="margin-bottom: 60px;">
+                 <legend>개인정보 수집 및 이용</legend>
+                <tr>
+                    <th>구분</th>
+                    <th>목적</th>
+                    <th>항목</th>
+                    <th>보유 및 이용기간</th>
+                </tr>
+                <tr>
+                    <td>선택</td>
+                    <td>맞춤 정보 제공,마케팅</td>
+                    <td>성별,생년월일</td>
+                    <td>회원탈퇴 후 5일까지</td>
+                </tr>
+            </table>
+            <input type="submit" value="회원가입하기" style=" padding: 10px 30px; color: rgb(255, 255, 255); background-color: rgb(255, 123, 0); border: 0px;">
+        </form>
+        <h2>☢로그인</h2>
+        <hr>
+        <input type="radio" style="margin-left: 100px;"> <label for="mem">회원</label><input type="radio" style="margin-left: 100px;"> <label for="non-mem">비회원</label>
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td>아이디작성</td>
+                <td rowspan="2">로그인</td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td>비밀번호</td>
+            </tr>
+        </table>
+        <input type="checkbox" style="margin-left: 100px;"> <label for="remem">아이디 저장</label><input type="checkbox" style="margin-left: 100px;"> <label for="keysecu">키보드보안접속</label><a href="#" style="border: 1px solid black; font-size: smaller; margin-left: 5px;">?</a><br>
+        <input type="submit" value="회원가입" style="margin-left: 100px;"><input type="submit" value="아이디 찾기" style="margin-left: 10px;"><input type="submit" value="비밀번호 찾기" style="margin-left: 10px;">
+    </div>
+</body>
+</html>
