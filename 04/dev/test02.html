@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+      text-align: center;
+    }
+    table{
+      margin: 0 auto;
+    }
+    table,th,td{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th,td{
+      text-align: center;
+      padding: 5px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" style=" ">
+    <h1>Advance HTML Table In Hindi</h1>
+    <table>
+      <colgroup> <!-- 행전체를 관리하는 기능이다. -->
+      <col style=" background-color: aquamarine;"> <!-- 1행 모든 백그라운드의 색을 변경한다. -->
+      <col>
+      <col>
+      <col style="width: 300px;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th rowspan="3">Day</th>
+          <th colspan="3">seminar</th>
+        </tr>
+        <tr>
+          <th colspan="2">Shedule</th>
+          <th rowspan="2">topic</th>
+        </tr>
+        <tr>
+          <th>start</th>
+          <th>End</th>
+        </tr>
+        <tbody>
+          <tr>
+            <td rowspan="2">Monday</td>
+            <td rowspan="2">08:00AM</td>
+            <td rowspan="2">05:00PM</td>
+            <td>Introducion</td>
+          </tr>
+          <tr>
+            <td>Uses</td>
+          </tr>
+          <tr>
+            <td rowspan="4">Tuesday</td>
+            <td>08:00AM</td>
+            <td>11:00PM</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>11:00AM</td>
+            <td>02:00PM</td>
+            <td>Learn</td>
+          </tr>
+          <tr>
+            <td>02:00PM</td>
+            <td>08:00PM</td>
+            <td rowspan="2">-</td>
+          </tr>
+          <tr>
+            <td>10:00AM</td>
+            <td>01:00PM</td>
+          </tr>
+          <tr>
+            <td>Wed-Fri</td>
+            <td colspan="2">Full-Day</td>
+            <td>Practical</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Sat-Sun</td>
+            <td colspan="2">11:00AM-05:00PM</td>
+            <td>Extra Class</td>
+          </tr>
+        </tfoot>
+      </thead>
+
+    </table>
+  </div>
+</body>
+</html>
