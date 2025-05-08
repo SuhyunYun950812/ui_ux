@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        fieldset{
+            border: none;
+        }
+        legend,label{
+            padding: 10px;
+        }
+        input{
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-    <p>holy shit</p>
+    <fieldset>
+        <form action="#">
+            <legend>회원가입</legend>
+            <label for="">이름:</label><input type="text"> <br>
+            <label for="">암호:</label><input type="password"> <br>
+            <input type="submit" value="로그인하기">
+        </form>
+    </fieldset>
 </body>
 </html>
