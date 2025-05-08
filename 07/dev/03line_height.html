@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      /* 14줄 주석에서 안되는걸 처리하는게 바로 아래의 border-box다. */
+      box-sizing: border-box;
+    }
+    h1{
+      /* 500 x 200으로 간격을 설정해도 보더/패딩을 주면 그 간격에서 조정되지않고 가산되는 형식으로 처리된다. */
+      width: 500px;
+      height: 200px;
+      border: 1px solid black;
+      padding: 10px;
+    }
+    p{
+      border: 1px solid black;
+      height: 50px;
+      /* 24~25줄 주석처럼 써서 정렬하거나*/
+      text-align: center;
+      line-height: 50px;
+      /* 27 ~ 32줄 주석처럼 써서 정렬할 수 있다. */
+      /* text-align: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center; */
+    }
+  </style>
+</head>
+<body>
+  <p>
+    Lorem ipsum dolor
+  </p>
+  <h1>[web 발신]너는 나를 존중해야 한다</h1>
+</body>
+</html>

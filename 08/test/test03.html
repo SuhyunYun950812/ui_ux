@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    .menu{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+    li{
+      list-style: none;
+      border: 1px solid grey;
+      border-collapse: collapse;
+      background-color: #ccc;
+    }
+    a{
+      list-style: none;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+      }
+      /* a:link -> 만지기 전 상태, a:visited -> 만진 후 상태 , a:hover -> 마우스 갖다 댔을 때 상태 */
+      a:link,a:visited{
+        color: black;
+      }
+      a:hover{
+        background-color: black;
+        color: #fff;
+      }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul class="menu">
+      <li><a href="">메뉴1</a></li>
+      <li><a href="">메뉴2</a></li>
+      <li><a href="">메뉴3</a></li>
+      <li><a href="">메뉴4</a></li>
+    </ul>
+  </div>
+</body>
+</html>
