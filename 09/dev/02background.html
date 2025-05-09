@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      width: 100%;
+      height: 200vh;
+      background-color: lab(96.1% -19.65 93.73);
+      background-image: url('./../images/bg2.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-attachment: fixed;
+    }
+    div{
+      width: 400px;
+      height: 200px;
+      border: 5px solid rgba(222, 222, 222, 0.5);
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: rgba(75, 0, 130,0.2);
+      background-image: url('./../images/bg3.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 70px;
+    }
+    div.bg1{
+      background-origin: border-box;
+    }
+    div.bg2{
+      background-origin: padding-box;
+    }
+    div.bg3{
+      background-origin: content-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg1">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequatur aut minima ducimus itaque vero unde? Adipisci id sunt dicta, officiis veniam consequatur, nihil porro quidem, voluptatum vitae doloribus recusandae!</p>
+  </div>
+  <div class="bg2">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequatur aut minima ducimus itaque vero unde? Adipisci id sunt dicta, officiis veniam consequatur, nihil porro quidem, voluptatum vitae doloribus recusandae!</p>
+  </div>
+  <div class="bg3">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequatur aut minima ducimus itaque vero unde? Adipisci id sunt dicta, officiis veniam consequatur, nihil porro quidem, voluptatum vitae doloribus recusandae!</p>
+  </div>
+  
+</body>
+</html>

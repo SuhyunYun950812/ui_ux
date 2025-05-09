@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    .wrap{
+      padding: 10px;
+      width: 1000px;
+      display: flex;
+      flex-direction:column;
+      border-radius: 10px;
+      border: 1px solid rgb(38, 0, 255);
+      background-color:  rgb(38, 0, 255);
+    }
+    header,footer{
+      display: flex;
+      
+      justify-content: center;
+      align-items:center;
+
+      border-radius: 10px;
+      border: 1px solid rgb(0, 153, 255);
+      padding: 10px 20px;
+      text-align: center;
+      color: white;
+      background-color: rgb(0, 153, 255);
+      margin-bottom: 10px;
+    }
+    footer{
+      border-radius: 10px;
+      border: 1px solid rgb(0, 153, 255);
+      padding: 10px 20px;
+      text-align: center;
+      color: white;
+      background-color: rgb(0, 153, 255);
+      margin-bottom: 0;
+    }
+    nav{
+      width: 25%;
+      border-radius: 10px;
+      border: 1px solid rgb(0, 153, 255);
+      padding: 10px 20px;
+      text-align: center;
+      color: white;
+      background-color: rgb(0, 153, 255);
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+    /* section과 section 내부 영역 (main)*/
+    .main{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    section{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-bottom :10px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 1px solid rgb(0, 153, 255);
+      padding: 10px 10px;
+      text-align: center;
+      color: white;
+      background-color: rgb(0, 153, 255);
+    }
+
+    section > header,section > footer{
+      border-radius: 10px;
+      border: 1px solid burlywood;
+      text-align: center;
+      color: white;
+      background-color: burlywood;
+    }
+    section > p{
+      margin-bottom: 10px;
+    }
+    section > footer{
+      border-radius: 10px;
+      border: 1px solid burlywood;
+      text-align: center;
+      color: white;
+      background-color: burlywood;
+      margin-bottom: 0;
+    }
+
+    section > article{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100px;
+      border-radius: 10px;
+      border: 1px solid burlywood;
+      text-align: center;
+      color: white;
+      background-color: burlywood;
+      margin-bottom: 10px;
+    }
+    aside{
+      width: 25%;
+      border-radius: 10px;
+      border: 1px solid rgb(0, 153, 255);
+      padding: 10px 20px;
+      text-align: center;
+      color: white;
+      background-color: rgb(0, 153, 255);
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- header 상단영역 -->
+       <header><p>&lt;header&gt;</p></header>
+<div class="main">
+      <!-- nav / section / aside 중앙영역 -->
+      <nav><p>&lt;nav&gt;</p></nav>
+      <!-- section 영역 -->
+      <section><p>&lt;section&gt;</p>
+        <header><p>&lt;header&gt;</p></header>
+        
+        <article><p>&lt;article&gt;</p></article>
+
+        <footer><p>&lt;footer&gt;</p></footer>
+      </section>
+      <!-- aside 영역 -->
+      <aside><p>&lt;aside&gt;</p></aside>
+</div>
+    <!-- footer 하단영역 -->
+    <footer><p>&lt;footer&gt;</p></footer>
+  </div>
+</body>
+</html>
