@@ -12,8 +12,13 @@
     box-sizing: border-box;
     border: 1px solid salmon; /* 영역구분용 (지울거임) */
   }
+  body{
+    max-width: 1250px;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
   .wrap{
-    max-width: 1200px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,33 +26,280 @@
     border: 1px solid salmon; /* 영역구분용 (지울거임) */
   }
   /* login (0층) */
-  .wrap > div.login{
+  .login{
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
+  div.login > section{
+    width: 10%;
+  }
   /* header 영역 (1층)*/
-  h1{
-    border: 1px solid salmon; /* 영역구분용 (지울거임) */
-  }
-  header > ul{
+  header{
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .headleft{
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .headright{
+    width: 23%;
+    height: 30px;
+  }
+  h1{
+    width: 70px;
+    border: 1px solid salmon; /* 영역구분용 (지울거임) */
+    color: rgb(255, 80, 60);
+    margin-right: 20px;
+  }
+  .headleft > ul{
+    display: flex;
+    padding: 0px;
     border: 1px solid salmon; /* 영역구분용 (지울거임) */
   }
-  header > ul > li{
+  .headleft > ul > li{
+    height: 30px;
     list-style: none;
     border: 1px solid salmon; /* 영역구분용 (지울거임) */
     padding: 1px 2px;
-    margin: 1px 2px;
+    margin: 1px 10px;
+    font-weight: bold;
+  }
+  .headleft > ul > li:nth-child(1){
+    color: rgb(255, 80, 60);
+  }
+
+  .headright > input[type="search"]{
+    border: 1px solid salmon;
+    border-radius: 3px;
+    width: 150px;
+    margin: 5px;
+  }
+  .headright > i{
+    margin: 5px;
   }
   /* section 영역1 (2층)*/
-
-  /* nav 영역 (3층)*/
-  nav > h2 > input[v]{
-
+  .section1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    min-width: 600px;
+    margin-bottom: 50px;
+    gap: 0;
   }
-    /* section 영역2 (4층)*/
-
+  .story-container{
+    display: flex;
+    position: relative;
+    width: 1000px;
+    max-width: 100%;
+    min-width: 800px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .bigstory{
+    width: 70%;
+    z-index: 1;
+  }
+  .bigstory > ul{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .bigstory > ul > li{
+    height: 50px;
+    font-size: 25px;
+    list-style: none;
+    border: 1px solid salmon; /* 영역구분용 (지울거임) */
+    padding: 1px 2px;
+  }
+  .bigstory > ul > p{
+    width: 70%;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .bigstory > ul > p > span{
+    font-weight: bold;
+  }
+  .bigstoryline{
+    width: 100vw;
+    height: 5px;
+    background-color: black;
+    position: relative;
+    border: none;
+  }
+  .imageline{
+    position: a;
+    height: 150px;
+    max-width: 300px;
+    margin-bottom: -50px;
+    z-index: 2;
+  }
+  .section1 button.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    color: gray;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .section1 button.arrow.left{
+    left: -100px;
+  }
+  .section1 button.arrow.right{
+    right: -100px;
+  }
+  @media (max-width: 768px){
+    .story-container{
+      flex-direction: column;
+      align-items: center;
+    }
+    .bigstory{
+      width: 100%;
+      margin-right: 0;
+    }
+    .imageline{
+      margin-top: 20px;
+    }
+    .section1 button.arrow{
+      font-size: 30px;
+    }
+  }
+  /* nav 영역 (3층)*/
+  .navbackground{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100vw;
+    position: relative;
+    background-color: rgb(30, 221, 126);
+  }
+  .nav{
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+  nav.nav-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 30px auto;
+  }
+  .nav-head > h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .nav-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .nav-box{
+    display: flex;
+    align-items: center;
+    width: 380px;
+    height: 120px;
+    background-color: ivory;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .nav-image {
+  margin-right: 15px;
+  flex-shrink: 0;
+  }
+  .nav-image img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+    /* section 영역2 추천 페이지 (4층)*/
+    .suggest-page{
+      margin-top: 30px;
+      width: 100%;
+    }
+    .suggest{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1250px;
+    }
+    .suggest > h2{
+      padding: 10px;
+    }
+    .tap{
+      width: 8%;
+    }
+    .tap > button{
+      font-weight: bold;
+      font-size: large;
+      padding: 10px 15px;
+    }
+    .suggest-box{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      background-color: ivory;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .suggest-left{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+      margin-right: 30px;
+    }
+    .left-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .left-bottom{
+      width: 150px;
+      margin-top: 10px;
+    }
+    .left-bottom > button{
+      margin-top: auto;
+      border-radius: 50px;
+      padding: 5px 25px;
+      cursor: pointer;
+    }
+    .suggest-left img{
+      width: 60px;
+      height: 60px;
+      display: block;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-left: 10px;
+      margin-bottom: 25px;
+    }
+    .suggest-right{
+      flex: 1;
+      display: flex;
+      gap: 10px;
+    }
+    .suggest-right > div{
+      width: 180px;
+      height: 100px;
+    }
     /* main 영역(5층) */
 
     /* section 영역3 (6층) */
@@ -70,38 +322,146 @@
       </div>
     <!-- 헤더 -->
     <header>
-      <h1>
-        <i class="fa-solid fa-mug-saucer"></i> cafe
-      </h1>
-      <ul>
-        <li>홈</li>
-        <li>테이블</li>
-        <li>팬카페</li>
-        <li>카페랭킹</li>
-        <li>내카페</li>
-      </ul>
+      <div class="headleft">
+        <h1>cafe</h1>
+        <ul>
+          <li>홈</li>
+          <li>테이블</li>
+          <li>팬카페</li>
+          <li>카페랭킹</li>
+          <li>내카페</li>
+        </ul>
+      </div>
+      <div class="headright">
+        <select name="searchtype" id="searchtype">
+          <option value="전체검색"></option>
+          <option value="통합검색"></option>
+          <option value="카페검색"></option>
+          <option value="테이블검색"></option>
+          <option value="샷검색"></option>
+        </select>
+        <input type="search" name="search" id="serach" placeholder="검색어를 입력하세요"><i class="fa-solid fa-magnifying-glass"></i>
+      </div>
     </header>
     <!-- 섹션1 -->
-    <section>
-      <article>
-        <p>이야기 여섯 이런 선물은 두 번 다시 못 받음🎁</p>
-      </article>
-    </section>
+     <div class="section1">
+        <button class="arrow left">&lt;</button>
+        <div class="story-container">
+          <div class="bigstory">
+            <ul>
+              <p>이야기 하나 <span>공항에서 10초만에 경찰👮을 불러 어그로 끄는 법🎁</span></p>
+              <li>아시아가 놀라고 전세계가 경악한 대한민국 김치의 비밀</li>
+              <li>치즈볼을 먹고 이성을 잃어 돼지🐖가 되버린 한 사내의 비극</li>
+              <li>일상생활에 의외로 유용한 아이템 999종류를 소개합니다</li>
+              <li>친일파가 국가유공자가 된 건에 대하여</li>
+            </ul>
+          </div>
+        </div>
+        <img src="./../images/cat.png" class="imageline">
+        <button class="arrow right">&gt;</button>
+      </div>
+      <div class="bigstoryline">
+      </div>
     <!-- 나브 -->
-    <nav>
-      <h2>지금 로그인하고 다양한 카페를 찾아 가입해 보세요! <input type="button" value="로그인하기"></h2>
-      <ul>
-        <li><article></article></li>
-        <li><article></article></li>
-        <li><article></article></li>
-        <li><article></article></li>
-        <li><article></article></li>
-        <li><article></article></li>
-      </ul>
-    </nav>
+    <div class="navbackground">
+    <nav class="nav">
+        <div class="nav-head">
+          <h2>지금 로그인하고 다양한 카페를 찾아 가입해 보세요! <input type="button" value="로그인하기"></h2>
+        </div>
+        <div class="nav-main">
+          <div class="nav-box">
+            <div class="nav-image">
+              <img src="./../images/card1.png" alt="이미지1">
+            </div>
+            <div class="nav-text">
+              <strong>지옥에서 온 사악한 인형</strong>
+              <p>오자마자 담뱃재에 허무하게 사망해...</p>
+              <p>#지옥 #불조심</p>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-image">
+              <img src="./../images/card2.png" alt="이미지2">
+            </div>
+            <div class="nav-text">
+              <strong>장난으로 물어뜯은 전선</strong>
+              <p>격노한 집사에 의해 집에서 쫓겨나..</p>
+              <p>#고양이 #강제출가</p>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-image">
+              <img src="./../images/card3.png" alt="이미지3">
+            </div>
+            <div class="nav-text">
+              <strong>중국서 적응못해 한국에 밀입국한 푸바오</strong>
+              <p>한/중 협력으로 6시간만에 강제귀환...</p>
+              <p>#푸바오 #동물원</p>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-image">
+              <img src="./../images/card4.png" alt="이미지4">
+            </div>
+            <div class="nav-text">
+              <strong>고양이인 줄 알고 7년간 살아온 살쾡이</strong>
+              <p>1주일 째 츄르를 거부하는걸로 밝혀져</p>
+              <p>#살쾡이 #출생의 비밀</p>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-image">
+              <img src="./../images/card5.png" alt="이미지5">
+            </div>
+            <div class="nav-text">
+              <strong>야채요정 여유로의 실종소식</strong>
+              <p>한 가정집에서 연근조림으로 발견되...</p>
+              <p>#여유로 #한끼식사</p>
+            </div>
+          </div>
+          <div class="nav-box">
+            <div class="nav-image">
+              <img src="./../images/card6.png" alt="이미지6">
+            </div>
+            <div class="nav-text">
+              <strong>카페만들기</strong>
+              <p>지금 카페를 만들어 보세요!</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
     <!-- 섹션2 -->
-    <section>
+    <section class="suggest-page">
+      <div class="suggest">
+        <h2>추천 테이블</h2>
+        <div class="tap">
+          <button class="left">&lt;</button>
+          <button class="right">&gt;</button>
+        </div>
+      </div>
       
+      <div class="suggest-box">
+            <div class="suggest-left">
+              <img src="./../images/munk.jpg" alt="추천테이블 메인">
+              <div class="left-text">
+                <strong>오늘의 이슈</strong>
+                <p>오늘은 내가 도축되는 날🔪</p>
+                <p>손님 1.5만 · 단골 367 · 글 184</p>
+                <div class="left-bottom">
+                  <button><i class="fa-solid fa-magnifying-glass">테이블 더보기</i></button>
+                </div>
+              </div>
+            </div>
+            <div class="suggest-right">
+              <div class="right1"></div>
+              <div class="right2"></div>
+              <div class="right3"></div>
+              <div class="right4"></div>
+            </div>
+      </div>
+      <div class="more">
+      </div>
     </section>
     <!-- 메인 -->
     <main>
