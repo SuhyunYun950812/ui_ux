@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+      color: salmon;
+      background-color: chartreuse;
+      border: 1px solid slateblue;
+      text-align: center;
+    }
+    /* 모바일 기준 */
+    @media screen and (max-width:500px){
+      .header1{
+      color: black;
+      background-color: rgb(255, 0, 247);
+      border: 1px solid slateblue;
+      text-align: center;
+      }
+    }
+    /* 태블릿 기준 */
+    @media screen and (min-width: 600px) and (max-width:900px){
+      .header2{
+      color: rgb(225, 255, 0);
+      background-color: rgb(255, 0, 0);
+      border: 1px solid slateblue;
+      text-align: center;
+      }
+    }
+      /* 일반 PC */
+    @media screen and (min-width: 990px) and (max-width:1200px){
+      .header3{
+      color: rgb(0, 0, 255);
+      background-color: rgb(255, 128, 0);
+      border: 1px solid slateblue;
+      text-align: center;
+      }
+    }
+      /* 일반 PC */
+    @media screen and (min-width:1200px){
+      .heade4{
+      color: rgb(0, 255, 191);
+      background-color: rgb(162, 0, 255);
+      border: 1px solid slateblue;
+      text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="header1">HTML1</h1>
+  <h1 class="header2">HTML2</h1>
+  <h1 class="header3">HTML3</h1>
+  <h1 class="header4">HTML4</h1>
+</body>
+</html>

@@ -10,7 +10,6 @@
   *{
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid salmon; /* 영역구분용 (지울거임) */
   }
   body{
     max-width: 1250px;
@@ -23,7 +22,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid salmon; /* 영역구분용 (지울거임) */
   }
   /* login (0층) */
   .login{
@@ -53,19 +51,16 @@
   }
   h1{
     width: 70px;
-    border: 1px solid salmon; /* 영역구분용 (지울거임) */
     color: rgb(255, 80, 60);
     margin-right: 20px;
   }
   .headleft > ul{
     display: flex;
     padding: 0px;
-    border: 1px solid salmon; /* 영역구분용 (지울거임) */
   }
   .headleft > ul > li{
     height: 30px;
     list-style: none;
-    border: 1px solid salmon; /* 영역구분용 (지울거임) */
     padding: 1px 2px;
     margin: 1px 10px;
     font-weight: bold;
@@ -116,7 +111,6 @@
     height: 50px;
     font-size: 25px;
     list-style: none;
-    border: 1px solid salmon; /* 영역구분용 (지울거임) */
     padding: 1px 2px;
   }
   .bigstory > ul > p{
@@ -135,7 +129,7 @@
     border: none;
   }
   .imageline{
-    position: a;
+    position: relative;
     height: 150px;
     max-width: 300px;
     margin-bottom: -50px;
@@ -301,12 +295,49 @@
       height: 100px;
     }
     /* main 영역(5층) */
+    main{
+      width: 100%;
+      padding: 20px;
+    }
+    .popbox {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .poplist{
+      display: flex;
+      flex-direction: column;
+    }
+    .poplist-head{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .poplist-mid{
 
+    }
+    .poplist-bot{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     /* section 영역3 (6층) */
 
     /* section 영역4 (7층)*/
 
     /* footer 영역 (8층) */
+    footer{
+      width: 100%;
+    }
+    .footer-head{
+      width: 70%;
+    }
+    .footer-head > h3{
+      font-size: 12px;
+    }
+    .footer-bot{
+      width: 30%;
+    }
 </style>
 <body>
   <div class="wrap">
@@ -465,9 +496,86 @@
     </section>
     <!-- 메인 -->
     <main>
-      <section class="left"></section>
-      
-      <section class="right"></section>
+      <div class="popbox">
+        <section class="poplist">
+          <article class="poplist-head">
+            <h2>카페인기글</h2>
+            <p>2025.05.12.13:32</p>
+          </article>
+          <article class="poplist-mid">
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>1</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>2</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>3</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>4</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>5</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>6</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>7</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>8</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>9</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+            <article class="poplist-mid-num">
+              <img src="./../images/card1.png" alt="">
+              <p><span>10</span> 한 때 어쩌구저쩌구</p>
+              <h3>카페명 댓글 <span>1</span></h3>
+            </article>
+          </article>
+          <article class="poplist-bot">
+            <p>&lt; 1 / 10 &gt;</p>
+          </article>
+        </section>
+        <section class="noti">
+          <h2>공지</h2>
+          <article class="noti-head">
+
+          </article>
+          <article class="noti-list">
+            <p>[안내] 어쩌구</p>
+            <p>[안내] 저쩌구</p>
+            <p>[안내] 이쩌구</p>
+            <p>[안내] 쟤쩌구</p>
+            <p>[안내] 오쩌구</p>
+          </article>
+          <article class="">
+            <h2>카페 지원 안내</h2>
+          </article>
+          <img src="./../images/card3.png" alt="">
+        </section>
+      </div>
     </main>
     <!-- 섹션3 -->
     <section>
@@ -481,7 +589,14 @@
     
     <!-- 푸터 -->
     <footer>
-      
+      <section class="footer-head">
+      <h1>cafe</h1>
+      <h3>서비스 약관/정책 · 권리침해신고 · 이용약관 · 상거래 피해구제신청 · 카페운영정책 · 청소년보호정책 · 개인정보처리방침 · 고객센터 · 문의하기</h3>
+      <p>ⓒ Kakao Corp.</p>
+      </section>
+      <section class="footer-bot">
+        <img src="./../images/cat.png" class="imageline">
+      </section>
     </footer>
   </div>
   </body>
