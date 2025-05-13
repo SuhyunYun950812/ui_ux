@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./../css/test01.css">
+</head>
+<body>
+  <h1>포트폴리오 문제</h1>
+  <hr>
+  <fieldset>
+    <legend>공지사항 작성하기</legend>
+    <form method="post" action="insert.no">
+      <article class="title">
+        <label>제목</label><input type="text" name="title" id="title" placeholder="제목을 입력하시오.">
+      </article>
+      <article class="content">
+        <label>내용</label><textarea name="content" id="content" placeholder="내용을 입력하시오."></textarea>
+      </article>
+      <article class="file">
+        <label>첨부파일</label>
+        <input type="file" name="uploadFile" id="file" placeholder="파일 선택">
+      </article>
+      <article style="width: 45%; display: flex; justify-content: center;">
+        <input type="submit" value="작성하기">
+      </article>
+    </form>
+  </fieldset>
+    <hr>
+    <table>
+    <thead>
+      <th style="width: 7.5%;">번호</th>
+      <th colspan="2" style="width: 60%;">제목</th>
+      <th style="width: 7.5%;">작성자</th>
+      <th style="width: 15%;">작성일</th>
+      <th style="width: 10%;">조회수</th>
+    </thead>
+    <tbody>
+      <td style="width: 7.5%;">9</td>
+      <td>공지사항 제목 9</td>
+      <td style="width: 11%;"><button>바로가기</button></td>
+      <td>user01</td>
+      <td>2021-03-29</td>
+      <td>34</td>
+    </tbody>
+    <tbody>
+      <td style="width: 7.5%;">6</td>
+      <td>공지사항 제목 6</td>
+      <td style="width: 11%;"><button>바로가기</button></td>
+      <td>answ445</td>
+      <td>2021-03-12</td>
+      <td>67</td>
+    </tbody>
+    <tbody>
+      <td style="width: 7.5%;">3</td>
+      <td>공지사항 제목 3</td>
+      <td style="width: 11%;"><button>바로가기</button></td>
+      <td>testg12</td>
+      <td>2021-03-01</td>
+      <td>98</td>
+    </tbody>
+    <tbody>
+      <td style="width: 7.5%;">2</td>
+      <td>공지사항 제목 2</td>
+      <td style="width: 11%;"><button>바로가기</button></td>
+      <td>palwe3</td>
+      <td>2021-01-02</td>
+      <td>85</td>
+    </tbody>
+    <tbody>
+      <td style="width: 7.5%;">1</td>
+      <td>공지사항 제목 1</td>
+      <td style="width: 11%;"><button>바로가기</button></td>
+      <td>xml23</td>
+      <td>2021-12-24</td>
+      <td>124</td>
+    </tbody>
+    <tfoot>
+      <th colspan="4" style="width: 70%;">전체공지사항 갯수</th>
+      <th colspan="2" style="width: 30%;">5개</th>
+    </tfoot>
+  </table>
+</body>
+</html>

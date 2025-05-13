@@ -1,0 +1,44 @@
+    body{
+      width: 100vh;
+    }
+    hr{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+    }
+    article{
+      display: flex;
+      align-items: center;
+      margin: 3px;
+    }
+    label{
+      width: 80px;
+    }
+    .title > input{
+      width: 250px;
+    }
+    textarea{
+      width: 250px;
+      height: 100px;
+    }
+    table{
+      width: 100%;
+      padding: 1px;
+      gap: 1px;
+      border: 1px solid black;
+    }
+    th,td{
+      border: 1px solid black;
+    }
+    th{
+      background-color: orange;
+      text-align: center;
+      color: white;
+    }
+    td{
+      background-color: blanchedalmond;
+      text-align: start;
+    }
