@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .wrap{
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 100vh;
+    }
+    form{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    ul{
+      width: 300px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+      padding: 0;
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    li{
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    label{
+      display: inline-block;
+      text-align: center;
+      width: 50px;
+    }
+    .buttonline{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+    }
+    button{
+      width: 50px;
+      height: 30px;
+      padding: 5px 10px;
+      font-weight: 700;
+    }
+    .buttonline input{
+      width: 50px;
+      height: 30px;
+      padding: 5px 10px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <form action="">
+      <ul>
+        <li><label for="x">X</label><input type="text" id="x" placeholder="첫번째 값 입력"></li>
+        <li><label for="y">Y</label><input type="text" id="y" placeholder="두번째 값 입력"></li>
+        <li><label for="result">결과</label><input type="text" id="result"></li>
+      </ul>
+    </form>
+    <div class=" buttonline">
+      <button id="add">＋</button>
+      <button id="sub">―</button>
+      <button id="multi">×</button>
+      <button id="divi">÷</button>
+      <input type="reset" value="clear" id="reset">
+    </div>
+  </div>
+
+  <script>
+    let x = document.querySelector('#x');
+    let y = document.querySelector('#y');
+    let result = document.querySelector('#result');
+
+    let add = document.querySelector('#add');
+    let sub = document.querySelector('#sub');
+    let multi = document.querySelector('#multi');
+    let divi = document.querySelector('#divi');
+    let reset = document.querySelector('#reset');
+
+    add.onclick = function(e){
+      result.value = Number(x.value) + Number(y.value);
+    }
+    sub.onclick = function(e){
+      result.value = Number(x.value) - Number(y.value);
+    }
+    multi.onclick = function(e){
+      result.value = Number(x.value) * Number(y.value);
+    }
+    divi.onclick = function(e){
+      result.value = Number(x.value) / Number(y.value);
+    }
+    reset.onclick = function(e){
+      x.value = '';
+      y.value = '';
+      result.value = '';
+    }
+  </script>
+</body>
+</html>

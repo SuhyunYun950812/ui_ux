@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .wrap{
+    width: 1120px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  div#result{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+  }
+  ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0;
+    gap: 5px;
+  }
+  li > button{
+    width: 100px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+</style>
+<body>
+  <div class="wrap">
+    <ul>
+      <li><button id="btnobj1">Green</button></li>
+      <li><button id="btnobj2">Orange</button></li>
+      <li><button id="btnobj3">Purple</button></li>
+    </ul>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // 1. 객체를 찾는다. 반복문을 이용해서 처리하겠다. (우와)
+    let btnList = document.querySelectorAll("button");
+
+    let btnobj1 = document.querySelector('#btnobj1');
+    let btnobj2 = document.querySelector('#btnobj2');
+    let btnobj3 = document.querySelector('#btnobj3');
+    let result = document.querySelector('#result');
+    // 2. 객체 속성, 텍스트컨텐츠, 스타일, (이벤트 설정)
+    for(let i = 0 ; i < btnList.length ; i++){
+      btnList[i].onmouseover = e =>{
+        let colorText = btnList[i].innerHTML;
+      result.style.backgroundColor = colorText;
+      };
+    }
+
+    // btnobj1.onclick = e => {
+    //   let colorText = btnobj1.innerHTML;
+    //   result.style.backgroundColor = colorText;
+    // }
+    // btnobj2.onclick = e => {
+    //   let colorText = btnobj2.innerHTML;
+    //   result.style.backgroundColor = colorText;
+    // }
+    // btnobj3.onclick = e => {
+    //   let colorText = btnobj3.innerHTML;
+    //   result.style.backgroundColor = colorText;
+    // }
+  </script>
+</body>
+</html>

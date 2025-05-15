@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .wrap{
+      width: 1120px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    h1{
+      margin-bottom: 15px;
+    }
+    hr{
+      margin-bottom: 15px;
+    }
+    /* 공지사항 작성하기 스타일 */
+    form{
+      margin-bottom: 15px;
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+    }
+    label{
+      display: inline-block;
+      text-align: center;
+      width: 80px;
+    }
+    ul > li{
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+    textarea#content{
+      resize: none;
+    }
+    input[type="submit"]{
+      margin-left: 12%
+    }
+    /* 테이블 작성하기 스타일 */
+    table{
+      width: 100%;
+    }
+    table,th,td,tr{
+      border: 1px solid black;
+    }
+    th,td{
+      padding: 5px;
+    }
+    td > a{
+      display: inline-block;
+      background-color: rgb(225, 225, 225);
+      width: 100%;
+      padding: 3px;
+      border: 1px solid black;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      color: black;
+    }
+    thead,tfoot{
+      background-color: salmon;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white;
+    }
+    tbody{
+      background-color: beige;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>포트폴리오 문제</h1>
+    <hr>
+    <!-- 공지사항 서버 전송 -->
+    <form method='post' action='insert.no'>
+      <fieldset>
+        <legend>공지사항 작성하기</legend>
+        <ul>
+          <li><label for="subject">제목</label><input type="text" name="title" id="subject" placeholder="제목을 입력하시오." size="30px"></li>
+          <li><label for="content">내용</label><textarea name="content" id="content" cols="30" rows="10" placeholder="내용을 입력하시오."></textarea></li>
+          <li><label for="file">첨부파일</label><input type="file" name="uploadFile" id="file" placeholder="파일 선택"></li>
+          <input type="submit" value="전송하기">
+        </ul> 
+      </fieldset>
+      </form>
+      <hr>
+      <!-- 테이블 표 -->
+       <table>
+        <colgroup>
+        <col style="width: 5%">
+        <col style="width: 50%">
+        <col style="width: 10">
+        <col style="width: 10%">
+        <col style="width: 15%">
+        <col style="width: 10%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>1</th>
+            <th colspan="2">2</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td><a href="http://">바로가기</a></td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td><a href="http://">바로가기</a></td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td><a href="http://">바로가기</a></td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td><a href="http://">바로가기</a></td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td><a href="http://">바로가기</a></td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">1</td>
+            <td colspan="2">5</td>
+          </tr>
+        </tfoot>
+       </table>
+  </div>
+  </body>
+  </html>
