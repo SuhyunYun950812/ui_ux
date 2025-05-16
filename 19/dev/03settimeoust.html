@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 600px;
+      height: 300px ;
+      margin: 30px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    button{
+      display: block;
+      width: 100px;
+      height: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="btnStart">Time Start</button>
+    <button id="btnStop">Time Out</button>
+  </div>
+
+  <script>
+    let btnStart = document.querySelector("#btnStart");
+    let btnStop = document.querySelector("#btnStop");
+    let timeId;
+
+    // setTimeout() 핸드폰 알람설정 10초 후 알람
+    // setInterval() 핸드폰 알람설정 10초 후 알람
+    btnStart.addEventListener("click",startFunc,false);
+    btnStop.addEventListener("click",stopFunc,false);
+    function startFunc(){
+      // timeId = setTimeout(() =>{console.log('알람발생')},3000); 한번만 발생함
+      timeId = setInterval(() =>{console.log('알람발생')},3000); // 멈추지 않는 이상 계속 반복
+    }
+    function stopFunc(){
+      console.log();
+      // clearTimeout(timeId);
+      clearInterval(timeId);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 600px;
+      height: 500px;
+      margin: 100px auto;
+      border: 3px solid red;
+      box-sizing: border-box;
+    }
+    .drawBorder{
+      border: 3px solid blue;
+      padding: 10px;
+    }
+    .redText{
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: red;
+    }
+    .btnlist{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li class="drawBorder redText">Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+    <div class="btnlist">
+      <input type="text" id="message"> 
+      <button>리스트추가하기</button>
+      <button>이미지추가하기</button>
+      <button>자식삭제하기</button>
+    </div>
+  </div>
+
+</body>
+</html>

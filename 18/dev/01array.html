@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  
+  <script>
+    // 배열선언 (2개 numArray, charArray) : 배열끼리 합치는 기능 concat()
+    let numArray = [1,2,3];
+    let charArray = ["a","b","c","d"];
+    document.write(`<h1>numArray = ${numArray} </h1><br>`);
+    document.write(`<h1>charArray = ${charArray.toString()} </h1><br>`);
+    document.write(`<hr>`);
+    // 누구를 .concat 앞에다 두는지에 따라 저장배열순서가 달라진다.
+    let numCharArray = numArray.concat(charArray);
+    document.write(`<h1>numCharArray = ${numCharArray} </h1><br>`);
+    let charNumArray = charArray.concat(numArray);
+    document.write(`<h1>charNumArray = ${charNumArray} </h1><br>`);
+    document.write(`<hr>`);
+    // 배열 요소끼리 합치는 기능 join() charArray를 join을 해서 문자열로 만든다.
+    let strCharArray = charArray.join()
+    document.write(`<h1>strCharArray = ${strCharArray} </h1><br>`);
+    let joinCharArray = charArray.join("/")
+    document.write(`<h1>joinCharArray = ${joinCharArray} </h1><br>`);
+    document.write(`<hr>`);
+    // 배열에 ArrayList처럼 내용을 뒤에다 추가하는 기능(push)
+    // 현재 numArray 배열안에 잇는건 let numArray = [1,2,3];
+    let countArray = numArray.push(10,20);
+    document.write(`<h1>countArray = ${countArray} </h1><br>`);
+    document.write(`<h1>numArray = ${numArray} </h1><br>`);
+    document.write(`<hr>`);
+    // 배열에 ArrayList처럼 내용을 앞에다 추가하는 기능(unshift)
+    // 현재 numArray 배열안에 잇는건 let numArray = [1,2,3,10,20];
+    let count2Array = numArray.unshift(100,200);
+    document.write(`<h1>count2Array = ${count2Array} </h1><br>`);
+    document.write(`<h1>numArray = ${numArray} </h1><br>`);
+    document.write(`<hr>`);
+    // 배열에 ArrayList처럼 내용을 뒤에서 가져오는 기능(pop)
+    // 현재 numArray 배열안에 잇는건 let numArray = [100,200,1,2,3,10,20];
+    let popValue = numArray.pop();
+    document.write(`<h1>popValue = ${popValue} </h1><br>`);
+    document.write(`<h1>numArray = ${numArray} </h1><br>`);
+    document.write(`<hr>`);
+    // 배열에 ArrayList처럼 내용을 앞에서 가져가는 기능(shift)
+    // 현재 numArray 배열안에 잇는건 let numArray = [100,200,1,2,3,10];
+    let shiftValue = numArray.shift();
+    document.write(`<h1>shiftValue = ${shiftValue} </h1><br>`);
+    document.write(`<h1>numArray = ${numArray} </h1><br>`);
+    document.write(`<hr>`);
+    // 배열에 ArrayList처럼 중간에서 삭제하는 기능(splice)
+    // 현재 charArray 배열안에 잇는건 let numArray = ["a","b","c","d"];
+    let spliceValue = charArray.splice(1,2); // (제거를 시작하려는 인덱스,인덱스기준으로 n갯수를 제거),를 생략하면 제거시작인덱스 뒤로 싹다 제거한다.
+    document.write(`<h1>spliceValue = ${spliceValue} </h1><br>`);
+    document.write(`<h1>charArray = ${charArray} </h1><br>`);
+    document.write(`<hr>`);
+    // 배열에 ArrayList처럼 중간에서 삽입하는 기능(splice)
+    // 현재 charArray 배열안에 잇는건 let numArray = ["a","d"];
+    let splice2Value = charArray.splice(1,0,"k"); // (삽입을 시작하려는 인덱스,인덱스기준으로 n갯수 뒤에 삽입)
+    document.write(`<h1>splice2Value = ${splice2Value} </h1><br>`);
+    document.write(`<h1>charArray = ${charArray} </h1><br>`);
+    document.write(`<hr>`);
+    // 배열에 ArrayList처럼 원본을 해치지 않고 중간에서 복사하는 기능(slice)
+    // 현재 charArray 배열안에 잇는건 let numArray = ["a","k","d"];
+    let sliceValue = charArray.slice(0,2); // (삽입을 시작하려는 인덱스,인덱스기준으로 n번까지 복사)
+    document.write(`<h1>sliceValue = ${sliceValue} </h1><br>`);
+    document.write(`<h1>charArray = ${charArray} </h1><br>`);
+    document.write(`<hr>`);
+  </script>
+</body>
+</html>

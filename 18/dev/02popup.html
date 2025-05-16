@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<div class="wrap">
+  <button id="popup">팝업 창 열기</button>
+</div>
+<body>
+  
+  <script>
+    // 1. 객체를 찾는다.
+    let popup = document.querySelector("#popup");
+    let popClose = document.querySelector("#popClose");
+    let windowProxy;
+    // 2. 해당된 객체 (attribute(속성),context,style,event)
+
+    windowProxy = window.open("for_url.html","event","width= 700, height=500,left=100,top=100");
+    if(windowProxy === null){
+      window.alert("고객아 팝업해제 기능을 활성화시켜라");
+    }
+    popup.onclick = function(event){
+      windowProxy = window.open("for_url.html","event","width= 700, height=500,left=100,top=100");
+    }
+
+
+  </script>
+</body>
+</html>

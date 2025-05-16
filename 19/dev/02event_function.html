@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .wrap{
+      width: 1120px;
+      margin: 0 auto;
+      border: 3px solid black;
+    }
+    .content{
+      width: 60%;
+      margin: 0 auto;
+      border: 1px solid black;
+      text-align: center;
+      padding: 10px;
+    }
+    .img-main{
+      border: 1px solid black;
+      box-shadow: 10px 5px 5px black;
+      width: 80%;
+    }
+    .content-image{
+      border: 1px solid black;
+      box-shadow: 10px 5px 5px black;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .img-sub{
+      width: 33%;
+    }
+    .img-sub:hover{
+      cursor: pointer;
+      border: 3px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="content">
+      <!-- <img src="./../images/coffee-blue.jpg" alt="커피헤드" class="img-main" id="imgMain" onmouseover="changePic()" onmouseleave="originPic()"> -->
+      <img src="./../images/coffee-blue.jpg" alt="커피헤드" class="img-main" id="imgMain" onmouseover="changePic()" onmouseleave="originPic()">
+      <div class="content-image">
+        <img src="./../images/coffee-blue.jpg" alt="커피1" class="img-sub">
+        <img src="./../images/coffee-gray.jpg" alt="커피2" class="img-sub">
+        <img src="./../images/coffee-pink.jpg" alt="커피3" class="img-sub">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 객체 찾기
+    let imgMain = document.querySelector("#imgMain"); // 객체 1개
+
+    // 이벤트설정 2,3번째 방법
+    // imgMain.onmouseover = () => imgMain.src = './../images/coffee-gray.jpg';
+    // imgMain.onmouseleave = originPic;
+
+    // 이벤트 설정 4번째 방법
+    imgMain.addEventListener("mouseover", ()=>{
+      imgMain.src = "./../images/coffee-blue.jpg";
+    },false);
+
+    imgMain.addEventListener("mouseleave",() =>{
+    imgMain.src = "./../images/coffee-pink.jpg";
+    },false);
+    // 이벤트 핸들러 함수
+    function eventMessage(name){
+      console.log(`${name}상품을 선택하였습니다. 장바구니 추가, 합계 계산 100문장`);
+    }
+  </script>
+</body>
+</html>
