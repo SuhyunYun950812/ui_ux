@@ -1,11 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body {
+      padding: 50px 0;
+      margin: 0;
+    }
+
+    .wrap {
+      border: 1px solid black;
+      width: 1120px;
+      padding: 20px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .wrap input {
+      background-color: rgb(209, 209, 209);
+      border: 1px solid rgb(121, 120, 120);
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    fieldset {
+      margin: 0 auto;
+      width: 70%;
+      border: none;
+      padding: 0;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 16px;
+      padding: 0px;
+    }
+
+    .section {
+    }
+
+    .section h3 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      table-layout: fixed;
+    }
+
+    td,
+    tr {
+      font-size: 0.8rem;
+      border: 1px solid black;
+      padding: 10px;
+      padding-right: 25px;
+    }
+
+    td:first-child {
+      width: 90px;
+    }
+
+    .adress>input:nth-of-type(1) {
+      width: 50px;
+      margin-bottom: 3px;
+    }
+
+    .adress>input:nth-of-type(2) {
+      width: 250px;
+      margin-bottom: 3px;
+    }
+
+    .adress>input:nth-of-type(3) {
+      width: 250px;
+      margin-bottom: 3px;
+    }
+
+    .adress>input:nth-of-type(4) {
+      width: 250px;
+      margin-bottom: 3px;
+    }
+
+    p {
+      margin: 0px;
+    }
+
+    footer {
+      text-align: center;
+    }
+
+    footer>button:nth-child(1) {
+      color: white;
+      background-color: tomato;
+      border: none;
+    }
+
+    footer>button:nth-child(2) {
+      border: none;
+    }
+
+    img {
+      width: 220px;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <div class="wrap">
+    <h4>회 원 가 입</h4>
+    <!-- 사이트 이용정보 입력 -->
+    <div class="section">
+      <fieldset>
+        <legend>사이트 이용정보 입력</legend>
+        <table class="site">
+          <tr>
+            <td style="font-weight: 700;">아이디</td>
+            <td>
+              <p class="hint">영문자, 숫자, _만 입력 가능. 최소 3자 이상 입력하세요.</p>
+              <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">비밀번호</td>
+            <td>
+              <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">비밀번호 입력</td>
+            <td>
+              <input type="text">
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+    <!-- 개인정보 입력 -->
+    <div class="section">
+      <fieldset>
+        <legend>개인정보 입력</legend>
+        <table class="private">
+          <tr>
+            <td style="font-weight: 700;">이름</td>
+            <td>
+              <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">닉네임</td>
+            <td>
+              <p class="hint">공백없이 한글,영문,숫자만 입력 가능(4글자 이상)</p>
+              <p class="hint">닉네임을 바꾸시면 앞으로 1일 이내에는 변경 할 수 없습니다.</p>
+              <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">E-mail</td>
+            <td>
+              <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">가입 경로</td>
+            <td>
+              <input type="radio" name="path"><label for="#">인터넷</label>
+              <input type="radio" name="path"><label for="#">배너광고</label>
+              <input type="radio" name="path"><label for="#">관련기사를 보고</label>
+              <input type="radio" name="path"><label for="#">미라지 홈페이지 보고</label>
+              <input type="radio" name="path"><label for="#">주변사람 소개</label>
+              <input type="radio" name="path"><label for="#">기타</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">전화번호</td>
+            <td>
+              <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">휴대폰번호</td>
+            <td>
+              <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">생년월일</td>
+            <td>
+              <input type="text" placeholder="연도-월-일">
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">주소</td>
+            <td class="adress">
+              <input type="text"> <button>주소검색</button> <br>
+              <input type="text"> <label for="#">기본주소</label> <br>
+              <input type="text"> <label for="#">상세주소</label> <br>
+              <input type="text"> <label for="#">참고항목</label> <br>
+
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+
+    <!-- 기타 개인설정 -->
+    <div class="section">
+      <fieldset>
+        <legend>기타 개인설정</legend>
+        <table class="etc">
+          <tr>
+            <td style="font-weight: 700;">카카오톡 메세지</td>
+            <td>
+              <input type="checkbox"> <label for="#" style="font-size: 0.8rem; font-weight: 700;">카카오톡 메세지를
+                받겠습니다.</label>
+              <span style="color: red; font-size: 0.8rem;">>수신체크를 하시면 세일 소식을 가장먼저 받아보실 수 있습니다.</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">메일링서비스</td>
+            <td>
+              <input type="checkbox"> <label for="#">정보 메일을 받겠습니다.</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">SMS 수신여부</td>
+            <td>
+              <input type="checkbox"> <label for="#">휴대폰 문자메세지를 받겠습니다.</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">정보공개</td>
+            <td>
+              <p>정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 안됩니다.</p>
+              <input type="checkbox"> <label for="#">다른 분들이 나의 정보를 불 수 있도록 합니다.</label>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700;">자동등록방지</td>
+            <td>
+              <img src="./automatic.PNG" alt="#">
+              <p>자동등록방지 숫자를 순서대로 입력하세요.</p>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+
+    <footer>
+      <button>회원가입</button>
+      <button>취소</button>
+    </footer>
+
 </body>
+
 </html>
