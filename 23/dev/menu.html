@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 전체 기본 셋팅 */
+    *{
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    a{
+      text-decoration: none;
+      color: rgb(255, 136, 0);
+    }
+    ul{
+      list-style: none;
+    }
+    /* 메뉴 시작 */
+    ul.menu{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(56, 15, 94);
+    }
+    ul.menu > li > a{
+      display: inline-block;
+      padding: 10px;
+      width: 100px;
+      border: 1px solid rgb(255, 0, 0);
+      text-align: center;
+    }
+    ul.menu > li > a:hover{
+      background-color: chocolate;
+      color: rgb(56, 15, 94);
+    }
+    /* 서브 메뉴 */
+    ul.menu > li.dropdown:hover > ul.dropdowncontent{
+      display: flex;
+      flex-direction: column;
+      box-shadow: 12px 12px 2px 1px rgba(0, 255, 217, 0.2);
+    }
+    ul.dropdowncontent{
+      position: absolute;
+      display: none;
+    }
+    ul.dropdowncontent a{
+      display: inline-block;
+      padding: 10px;
+      width: 100px;
+      border: 1px solid rgb(72, 255, 0);
+      background-color: greenyellow;
+      color: rgb(56, 15, 94);
+      text-align: center;
+    }
+    ul.dropdowncontent a:hover{
+      background-color: rgb(56, 15, 94);
+      color: greenyellow;
+    }
+  </style>
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#">home</a></li>
+    <li><a href="#">home</a></li>
+    <li><a href="#">home</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">home</a>
+      <ul class="dropdowncontent">
+        <li><a href="#">sub</a></li>
+        <li><a href="#">sub</a></li>
+        <li><a href="#">sub</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

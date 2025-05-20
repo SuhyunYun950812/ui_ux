@@ -93,7 +93,7 @@ function onLoad() {
       }
     }).open();
   });
-  // 리셋 누를시 스팬 메시지 초기화 (미완성)
+  // 리셋 누를시 스팬 메시지 초기화
   reset.addEventListener("click",()=>{
     for(let i = 0 ; i < msg.length ; i++){
       msg[i].textContent = "";
