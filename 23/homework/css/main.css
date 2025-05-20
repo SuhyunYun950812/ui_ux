@@ -1,0 +1,199 @@
+    /* 전체 기본 셋팅 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 1120px;
+      margin: 0 auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(255, 136, 0);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* 메뉴 시작 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(56, 15, 94);
+      padding: 25px;
+      margin-bottom: 5px;
+    }
+
+    header>p {
+      color: white;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    header>p>i.fa-brands {
+      margin: 0 15px;
+    }
+
+    ul.menu {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(56, 15, 94);
+    }
+
+    ul.menu>p {
+      color: white;
+    }
+
+    ul.menu>li>a {
+      display: inline-block;
+      padding: 10px;
+      width: 100px;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    ul.menu>li>a:hover {
+      background-color: chocolate;
+      color: rgb(56, 15, 94);
+    }
+
+    /* 서브 메뉴 */
+    ul.menu>li.dropdown:hover>ul.dropdowncontent {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 12px 12px 2px 1px rgba(0, 255, 217, 0.2);
+    }
+
+    ul.dropdowncontent {
+      position: absolute;
+      display: none;
+    }
+
+    ul.dropdowncontent a {
+      display: inline-block;
+      padding: 10px;
+      width: 100px;
+      border: 1px solid rgb(72, 255, 0);
+      background-color: greenyellow;
+      color: rgb(56, 15, 94);
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    ul.dropdowncontent a:hover {
+      background-color: rgb(56, 15, 94);
+      font-size: 1.4rem;
+      color: greenyellow;
+    }
+
+    /* 대형 이미지 배너 */
+    .bigpicture {
+      width: 100%;
+      height: 450px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+
+    .bigpicture>img {
+      position: absolute;
+      height: 100%;
+      border-radius: 75px;
+      object-fit: cover;
+    }
+
+    .bigpicture>img:first-child {
+      left: 0;
+      transform: translate(-30%);
+    }
+    .bigpicture>img:last-child {
+      right: 0;
+      transform: translate(30%);
+    }
+
+    /* 중앙 3단 영역 */
+    .mid {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .mid div {
+    }
+
+    .mid h3 {
+      margin: 10px 0;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    main {
+      background-color: salmon;
+      border: 1px solid rgb(224, 223, 223);
+      margin-bottom: 5px;
+      padding: 10px;
+      width: 45%;
+    }
+
+    main>div {
+      padding: 5px;
+      background-color: rgb(224, 223, 223);
+    }
+
+    main div>input ,select {
+      border: none;
+      height: 22px;
+    }
+    main > div > #id,#call{
+      width: 70%;
+    }
+    main > div > #email,#callnum{
+      width: 29%;
+    }
+    main > div > #year,#month,#day{
+      width: 32.82%;
+    }
+    main > div > #pw , #pwcheck,#name,#male,#emailcheck,#nation,#serial{
+      width: 100%;
+    }
+    main > div > #serial{
+      border: 1px solid rgb(190, 190, 190);
+      background-color: rgb(225, 225, 225);
+    }
+    main div>label {
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    main button{
+      width: 100%;
+      border: none;
+      margin-top: 5px;
+      padding-bottom: 3.5px;
+      background-color: yellowgreen;
+      color: white;
+    }
+    nav,
+    aside {
+      background-color: salmon;
+      border: 1px solid rgb(224, 223, 223);
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 110px;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      background-color: khaki;
+      font-weight: 700;
+      text-align: center;
+      padding: 25px;
+    }

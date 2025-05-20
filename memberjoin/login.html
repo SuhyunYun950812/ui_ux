@@ -1,112 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    *{
-      margin: 0 auto;
-      box-sizing: border-box;
-    }
-    body{
-      width: 600px;
-      height: 500px;
-    }
-    form{
-      width: 400px;
-      margin: 0 auto;
-      padding: 10px;
-     }
-    h2{
-      margin-bottom: 10px;
-    }
-    fieldset{
-      padding-top: 0;
-      border: none;
-    }
-    main{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .logincom{
-      width: 70%;
-    }
-    .logincom > input{
-      width: 100%;
-      height: 30px;
-    }
-    .logincom > input#loginid{
-      margin-bottom: 5px;
-    }
-
-    main > button{
-      font-weight: 700;
-      font-size: 1rem;
-      border: none;
-      color: white;
-      background-color: red;
-      padding: 22px;
-    }
-    .logincheck{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 5px;
-    }
-    .logincheck > label{
-      margin: 0;
-    }
-    .logincheck > label:nth-child(2){
-      color: blue;
-      text-decoration: underline;
-    }
-    .loginetc{
-      width: 100%;
-      display: flex;
-      justify-content: space-evenly;
-    }
-    .loginetc > button{
-      border: 1px solid gray;
-      border-radius: 3px;
-      color: blue;
-      padding: 5px 20px;
-      margin: 0;
-    }
-    .loginetc > button:nth-child(1){
-      color: black;
-    }
-    .loginCheck{
-    }
-  </style>
+  <link rel="stylesheet" href="./css/login.css">
+  <script src="./js/login.js" defer></script>
 </head>
 <body>
   <div class="wrap">
     <form>
-
       <h2>로그인</h2>
-      
       <fieldset>
         <label><input type="radio" name="member" id="member" value="회원">회원</label>
         <label><input type="radio" name="member" id="non-member" value="비회원">비회원(주문조회)</label>
       </fieldset>
-
       <main class="login">
         <div class="logincom">
           <input type="text" id="loginid" placeholder="11번가 아이디"> <br>
-          <input type="password" id="loginpw"> 
+          <input type="password" id="loginpw">
         </div>
-        <button id="loginbtn">로그인</button> <br>
+        <button type="submit" id="loginbtn">로그인</button> <br>
       </main>
       <span id="loginCheck">js</span>
-
       <div class="logincheck">
         <label id="check1"><input type="checkbox" name="" id="rememId" value="아이디저장">아이디저장</label>
         <label id="check2">OTP 로그인<input type="checkbox" name="" id="otp" value="OTP 로그인"></label>
       </div>
-
       <div class="loginetc">
         <button id="joinMem">회원가입</button>
         <button id="findId">아이디 찾기</button>
@@ -114,25 +35,6 @@
       </div>
     </form>
   </div>
-
-  <script>
-    let loginIdPattern = /^ysh0812$/;
-    let loginPwPattern = /^258456$/;
-    
-    
-    let loginId = document.querySelector("#loginid");
-    let loginPw = document.querySelector("#loginpw");
-    let loginbtn = document.querySelector("#loginbtn");
-    let loginCheck = document.querySelector("#loginCheck");
-    
-    loginbtn.addEventListener("click",()=>{
-
-      if(!loginId.test(loginbtn.value) || !loginPw.test(loginbtn.value)){
-        loginCheck.textContent = "아이디 혹은 비밀번호가 틀렸습니다. 다시 입력해주세요.";
-      }else{
-        alert("로그인 성공");
-      }
-    });
-  </script> 
 </body>
+
 </html>

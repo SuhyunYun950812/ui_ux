@@ -64,12 +64,12 @@
           <tr>
             <td class="label">가입경로</td>
             <td class="radio-group">
-              <input type="radio" name="path" id="internet" /> <label for="internet">인터넷검색</label>
-              <input type="radio" name="path" id="banner" /> <label for="banner">배너광고</label>
-              <input type="radio" name="path" id="article" /> <label for="article">관련기사를 보고</label>
-              <input type="radio" name="path" id="homepage" /> <label for="homepage">미라지 홈페이지 보고</label>
-              <input type="radio" name="path" id="recommend" /> <label for="recommend">주변사람 소개</label>
-              <input type="radio" name="path" id="etc" /> <label for="etc">기타</label>
+              <input type="radio" name="path" id="internet" class="radioundo"/> <label for="internet">인터넷검색</label>
+              <input type="radio" name="path" id="banner" class="radioundo"/> <label for="banner">배너광고</label>
+              <input type="radio" name="path" id="article" class="radioundo"/> <label for="article">관련기사를 보고</label>
+              <input type="radio" name="path" id="homepage" class="radioundo"/> <label for="homepage">미라지 홈페이지 보고</label>
+              <input type="radio" name="path" id="recommend" class="radioundo"/> <label for="recommend">주변사람 소개</label>
+              <input type="radio" name="path" id="etc" class="radioundo"/> <label for="etc">기타</label><span class="msg" id="radiomsg">js</span>
             </td>
           </tr>
           <tr>
@@ -102,7 +102,7 @@
           <tr>
             <td class="label">카카오톡 메세지</td>
             <td class="checkbox-group">
-              <input type="checkbox" name="receiveMsg" id="receiveMsg" />
+              <input type="checkbox" name="receiveMsg" id="receiveMsg" class="checkboxundo"/>
               <span><strong>카카오톡 메세지를 받겠습니다.</strong></span>
               <span style="color: red"> > 수신체크를 하시면 세일 소식을 가장 먼저 받아보실 수 있습니다.</span>
             </td>
@@ -110,20 +110,20 @@
           <tr>
             <td class="label">메일링서비스</td>
             <td class="checkbox-group">
-              <input type="checkbox" name="receiveEmail" id="receiveEmail" /> 정보 메일을 받겠습니다.
+              <input type="checkbox" name="receiveEmail" id="receiveEmail" class="checkboxundo"/> 정보 메일을 받겠습니다.
             </td>
           </tr>
           <tr>
             <td class="label">SMS 수신여부</td>
             <td class="checkbox-group">
-              <input type="checkbox" name="receiveSMS" id="receiveSMS" /> 휴대폰 문자메세지를 받겠습니다.
+              <input type="checkbox" name="receiveSMS" id="receiveSMS" class="checkboxundo"/> 휴대폰 문자메세지를 받겠습니다.
             </td>
           </tr>
           <tr>
             <td class="label">정보공개</td>
             <td class="checkbox-group">
               정보공개를 바꾸시면 앞으로 0일 이내에는 변경이 안됩니다.<br />
-              <input type="checkbox" name="openInfo" id="openInfo" /> 다른분들이 나의 정보를 볼 수 있도록 합니다.
+              <input type="checkbox" name="openInfo" id="openInfo" class="checkboxundo"/> 다른분들이 나의 정보를 볼 수 있도록 합니다.
             </td>
           </tr>
           <tr>

@@ -27,6 +27,8 @@ function onLoad() {
   let checkHuman = document.querySelector("#checkHuman");
   let reset = document.querySelector("#reset");
   let msg = document.querySelectorAll(".msg");
+  let radioundo = document.querySelectorAll(".radioundo");
+  let checkboxundo = document.querySelectorAll(".checkboxundo");
 
   // 아이디
   id.addEventListener("blur", () => {
@@ -70,7 +72,7 @@ function onLoad() {
   });
   // 생년월일
   birthDay.addEventListener("blur", () => {
-        validate(birthDay, birthDayPattern, "정확한 생년월일 8자리를 입력해주세요");
+    validate(birthDay, birthDayPattern, "정확한 생년월일 8자리를 입력해주세요");
   });
   // 자동등록방지
   checkHuman.addEventListener("blur", () => {
@@ -94,9 +96,15 @@ function onLoad() {
     }).open();
   });
   // 리셋 누를시 스팬 메시지 초기화
-  reset.addEventListener("click",()=>{
-    for(let i = 0 ; i < msg.length ; i++){
-      msg[i].textContent = "";
+  reset.addEventListener("click", () => {
+    for (let x = 0; x < msg.length; x++) {
+      msg[x].textContent = "";
+    }
+    for (let y = 0; y < radioundo.length; y++) {
+      radioundo[y].checked = false;
+    }
+    for (let z = 0; z < checkboxundo.length; z++) {
+      checkboxundo[z].checked = false;
     }
   });
   //회원가입전송기능 점검
@@ -105,11 +113,26 @@ function onLoad() {
     //아이디
     let idReturn = validate(id, idPattern, "값을 정확하게 입력요청");
     if (idReturn === false) return;
+    //패스워드
     let pwReturn = validate(pw, pwPattern, "값을 정확하게 입력요청");
     if (pwReturn === false) return;
+    //이름
     let nameReturn = validate(name, namePattern, "값을 정확하게 입력요청");
     if (nameReturn === false) return;
-    //패스워드
+
+    let radioChecked = false;
+    for (let i = 0; i < radioundo.length; i++) {
+      if (radioundo[i].checked) {
+        radioChecked = true;
+        document.querySelector("#radiomsg").textContent = "";
+        break;
+      } 
+    }
+    if (!radioChecked) {
+      document.querySelector("#radiomsg").textContent = "가입 경로를 선택해주세요.";
+      return;
+    }
+
     let form = document.querySelector("form");
     alert('서버에 전송');
     form.submit();
