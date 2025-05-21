@@ -9,6 +9,10 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./../css/main.css">
+  <link rel="stylesheet" href="./../css/login.css">
+  <script src="./../js/main.js" defer></script>
+  <script src="./../js/login.js" defer></script>
+  </style>
 </head>
 
 <body>
@@ -31,76 +35,39 @@
       <p><a href="./mainlogin.html"><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-twitter"></i></a></p>
     </header>
     <div class="bigpicture">
+      <img src="./../img/제목 없음1.png" alt="#">
       <img src="./../img/제목 없음3.png" alt="#">
       <img src="./../img/제목 없음2.png" alt="#">
+      <img src="./../img/제목 없음4.png" alt="#">
     </div>
     <div class="mid">
       <nav>NAV</nav>
-      <main>
+      <main class="main" style="height: 618.5px;">
         <h3>Login Page</h3>
-        <div>
-          <label for="#">아이디</label> <br>
-          <input type="text" name="#" id="id">
-          <input type="email" name="#" id="email" placeholder="@naver.com">
+  <div class="loginbanner">
+    <form>
+      <h2>로그인</h2>
+      <fieldset>
+        <label><input type="radio" name="member" id="member" value="회원"> <i class="fa-brands fa-facebook">페이스북</i></label>
+        <label><input type="radio" name="member" id="non-member" value="비회원"> <i class="fa-brands fa-twitter">트위터</i></label>
+      </fieldset>
+      <main class="login">
+        <div class="logincom">
+          <input type="text" id="loginid" placeholder="아이디">
+          <input type="password" id="loginpw">
         </div>
-        <div>
-          <label for="#">비밀번호</label> <br>
-          <input type="text" name="#" id="pw">
-        </div>
-        <div>
-          <label for="#">비밀번호 재확인</label> <br>
-          <input type="text" name="#" id="pwcheck">
-        </div>
-        <div>
-          <label for="#">이름</label> <br>
-          <input type="text" name="#" id="name">
-        </div>
-        <div class="birth">
-          <label for="#">생년월일</label> <br>
-          <input type="text" name="#" id="year" placeholder="년(4자)">
-          <select name="month" id="month">
-            <option value="" disabled selected hidden>월</option>
-            <option value="">1월</option>
-            <option value="">2월</option>
-            <option value="">3월</option>
-            <option value="">4월</option>
-            <option value="">5월</option>
-            <option value="">6월</option>
-            <option value="">7월</option>
-            <option value="">8월</option>
-            <option value="">9월</option>
-            <option value="">10월</option>
-            <option value="">11월</option>
-            <option value="">12월</option>
-          </select>
-          <input type="text" name="#" id="day" placeholder="일">
-        </div>
-        <div>
-          <label for="#">성별</label> <br>
-          <select name="#" id="male">
-            <option value="" disabled selected hidden>성별</option>
-            <option value="">남자</option>
-            <option value="">여자</option>
-          </select>
-        </div>
-        <div>
-          <label for="#">본인 확인 이메일</label> <span>(선택)</span> <br>
-          <input type="text" name="#" id="emailcheck" placeholder="선택입력">
-        </div>
-        <div class="tel">
-          <label for="#">휴대전화</label> <br>
-          <select name="#" id="nation">
-            <option value="" disabled selected hidden>대한민국 +82</option>
-            <option value="">대한민국 +82</option>
-            <option value="">일본 +81</option>
-            <option value="">중국 +86</option>
-            <option value="">미국 +01</option>
-          </select> <br>
-          <input type="text" name="#" id="call" placeholder="전화번호 입력">
-          <button id="callnum">인증번호받기</button> <br>
-          <input type="text" name="#" id="serial" placeholder="인증번호를 입력하세요">
-        </div>
-        <button id="signup">가입하기</button>
+        <button type="submit" id="loginbtn">로그인</button>
+      </main>
+      <span id="loginCheck">js</span>
+      <div class="logincheck">
+        <label id="check1"><input type="checkbox" name="" id="rememId" value="아이디저장">아이디저장</label>
+      </div>
+      <div class="loginetc">
+        <button id="findId">아이디 찾기</button>
+        <button id="findPw">비밀번호 찾기</button>
+      </div>
+    </form>
+  </div>
       </main>
       <aside>ASIDE</aside>
     </div>

@@ -58,7 +58,7 @@
     }
 
     ul.menu>li>a:hover {
-      background-color: chocolate;
+      background-color: gold;
       color: rgb(56, 15, 94);
     }
 
@@ -67,7 +67,7 @@
       display: flex;
       flex-direction: column;
       box-shadow: 12px 12px 2px 1px rgba(0, 255, 217, 0.2);
-      z-index: 1;
+      z-index: 1000;
     }
 
     ul.dropdowncontent {
@@ -97,24 +97,15 @@
       width: 100%;
       height: 450px;
       position: relative;
-      overflow: hidden;
       margin-bottom: 5px;
     }
 
     .bigpicture>img {
       position: absolute;
+      width: 100%;
       height: 100%;
       border-radius: 75px;
       object-fit: cover;
-    }
-
-    .bigpicture>img:first-child {
-      left: 0;
-      transform: translate(-30%);
-    }
-    .bigpicture>img:last-child {
-      right: 0;
-      transform: translate(30%);
     }
 
     /* 중앙 3단 영역 */
@@ -133,7 +124,7 @@
       text-align: center;
     }
 
-    main {
+    .main {
       background-color: salmon;
       border: 1px solid rgb(224, 223, 223);
       margin-bottom: 5px;
